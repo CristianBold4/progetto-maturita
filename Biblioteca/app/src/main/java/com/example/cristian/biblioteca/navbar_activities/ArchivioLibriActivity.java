@@ -14,10 +14,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cristian.biblioteca.Home;
+import com.example.cristian.biblioteca.InterazioneServer;
 import com.example.cristian.biblioteca.NavDrawer;
 import com.example.cristian.biblioteca.R;
 import com.example.cristian.biblioteca.entities.Libro;
-import com.example.cristian.biblioteca.Adapter.LibroAdapter;
+import com.example.cristian.biblioteca.adapter.LibroAdapter;
 import com.example.cristian.biblioteca.connection.rf.RFClient;
 import com.example.cristian.biblioteca.connection.struct.libri.EmbeddedLibri;
 import com.example.cristian.biblioteca.connection.struct.libri.ServiceLibri;
@@ -45,6 +46,8 @@ public class ArchivioLibriActivity extends NavDrawer {
 
     private SearchView searchView;
 
+    private InterazioneServer interazioneServer = new InterazioneServer(ArchivioLibriActivity.this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +68,7 @@ public class ArchivioLibriActivity extends NavDrawer {
     }
 
     public void getArchivioLibri() {
+
         mService = RFClient.getClient().create(ServiceLibri.class);
         mService.getEmbedded().enqueue(new Callback<EmbeddedLibri>() {
             @Override

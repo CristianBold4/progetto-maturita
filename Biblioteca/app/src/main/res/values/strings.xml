@@ -139,6 +139,9 @@
     <string name="errore_campi_vuoti">I campi non possono essere vuoti</string>
     <string name="genere">Genere</string>
     <string name="text_home">Biblioteca Zuccante è l\'app che ti permetterà di prenotare libri direttamente dal tuo smartphone. Accedi con il tuo account Google e scopri le funzionalità dell\'app.</string>
+    <string name="libro_inserito">Libro inserito correttamente</string>
+    <string name="libro_modificato">Libro modificato correttamente</string>
+    <string name="libro_eliminato">Libro eliminato correttamente</string>
 
 
 </resources>

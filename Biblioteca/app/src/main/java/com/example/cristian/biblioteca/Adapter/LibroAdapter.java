@@ -1,4 +1,4 @@
-package com.example.cristian.biblioteca.Adapter;
+package com.example.cristian.biblioteca.adapter;
 
 
 import android.content.Context;

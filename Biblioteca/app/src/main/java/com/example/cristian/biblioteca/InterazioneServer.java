@@ -4,11 +4,14 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.cristian.biblioteca.connection.struct.libri.EmbeddedLibri;
 import com.example.cristian.biblioteca.entities.Libro;
 import com.example.cristian.biblioteca.connection.rf.RFClient;
 import com.example.cristian.biblioteca.connection.struct.libri.ServiceLibri;
 import com.example.cristian.biblioteca.connection.struct.prenotazioni.ServicePrenotazioni;
 import com.example.cristian.biblioteca.entities.Prenotazione;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,10 +33,40 @@ public class InterazioneServer {
         this.context = context;
     }
 
+    public void deleteLibro(Libro libro){
+
+        serviceLibri.deleteLibro(libro.getId().get$oid()).enqueue(new Callback<Libro>() {
+            @Override
+            public void onResponse(Call<Libro> call, Response<Libro> response) {
+                Toast.makeText(context, R.string.libro_eliminato, Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onFailure(Call<Libro> call, Throwable t) { }
+        });
+    }
+
+    public void modifyLibro(Libro libro){
+        serviceLibri.editLibro(libro.getId().get$oid(), libro).enqueue(new Callback<Libro>() {
+            @Override
+            public void onResponse(Call<Libro> call, Response<Libro> response) { }
+
+            @Override
+            public void onFailure(Call<Libro> call, Throwable t) { }
+        });
+    }
 
 
-    public void postLibro(Libro l) {
+    public void postLibro(Libro libro) {
+        serviceLibri.postLibro(libro).enqueue(new Callback<Libro>() {
+            @Override
+            public void onResponse(Call<Libro> call, Response<Libro> response) {
 
+            }
+
+            @Override
+            public void onFailure(Call<Libro> call, Throwable t) { }
+        });
     }
 
 

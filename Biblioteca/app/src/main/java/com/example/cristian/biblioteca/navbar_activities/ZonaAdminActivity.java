@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.example.cristian.biblioteca.ExpandableListAdapter;
 import com.example.cristian.biblioteca.Home;
 import com.example.cristian.biblioteca.InserisciLibroFragment;
+import com.example.cristian.biblioteca.InterazioneServer;
 import com.example.cristian.biblioteca.ModificaLibroFragment;
 import com.example.cristian.biblioteca.NavDrawer;
 import com.example.cristian.biblioteca.R;
@@ -39,6 +40,8 @@ public class ZonaAdminActivity extends NavDrawer implements InserisciLibroFragme
 
     List<Id> idLibriList = new ArrayList<>();
 
+    private InterazioneServer interazioneServer = new InterazioneServer(ZonaAdminActivity.this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,24 +50,18 @@ public class ZonaAdminActivity extends NavDrawer implements InserisciLibroFragme
 
         expListView = findViewById(R.id.list_view_prenotazioni);
 
-        expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
-            @Override
-            public boolean onGroupClick(ExpandableListView expandableListView, View view, int i, long l) {
-                if (i == 2){
-                    showInserisciLibroFragment();
-                    return true;
-                } else return false;
-            }
+        expListView.setOnGroupClickListener((expandableListView, view, i, l) -> {
+            if (i == 2){
+                showInserisciLibroFragment();
+                return true;
+            } else return false;
         });
 
-        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
-               if (i == 1){
-                   showModificaLibroFragment(i1);
-                   return true;
-               } else return false;
-            }
+        expListView.setOnChildClickListener((expandableListView, view, i, i1, l) -> {
+           if (i == 1){
+               showModificaLibroFragment(i1);
+               return true;
+           } else return false;
         });
 
         // preparing list data
@@ -189,35 +186,16 @@ public class ZonaAdminActivity extends NavDrawer implements InserisciLibroFragme
 
     @Override
     public void onItemInserted(Libro libro) {
-        ServiceLibri serviceLibri = RFClient.getClient().create(ServiceLibri.class);
-        serviceLibri.postLibro(libro).enqueue(new Callback<Libro>() {
-            @Override
-            public void onResponse(Call<Libro> call, Response<Libro> response) {
-
-            }
-
-            @Override
-            public void onFailure(Call<Libro> call, Throwable t) { }
-        });
-        Toast.makeText(ZonaAdminActivity.this, "Libro inserito correttamente", Toast.LENGTH_LONG).show();
+        interazioneServer.postLibro(libro);
+        Toast.makeText(ZonaAdminActivity.this, R.string.libro_inserito, Toast.LENGTH_LONG).show();
         prepareListData();
         listAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void onItemModified(Libro libro) {
-        ServiceLibri serviceLibri = RFClient.getClient().create(ServiceLibri.class);
-        serviceLibri.editLibro(libro.getId().get$oid(), libro).enqueue(new Callback<Libro>() {
-            @Override
-            public void onResponse(Call<Libro> call, Response<Libro> response) {
-
-            }
-
-            @Override
-            public void onFailure(Call<Libro> call, Throwable t) {
-            }
-        });
-        Toast.makeText(ZonaAdminActivity.this, "Libro modificato correttamente", Toast.LENGTH_LONG).show();
+        interazioneServer.modifyLibro(libro);
+        Toast.makeText(ZonaAdminActivity.this, R.string.libro_modificato, Toast.LENGTH_LONG).show();
         prepareListData();
         listAdapter.notifyDataSetChanged();
     }
@@ -232,20 +210,9 @@ public class ZonaAdminActivity extends NavDrawer implements InserisciLibroFragme
 
     @Override
     public void onItemDeleted(Libro libro) {
-        ServiceLibri serviceLibri = RFClient.getClient().create(ServiceLibri.class);
-        serviceLibri.deleteLibro(libro.getId().get$oid()).enqueue(new Callback<Libro>() {
-            @Override
-            public void onResponse(Call<Libro> call, Response<Libro> response) {
-                Toast.makeText(ZonaAdminActivity.this, "Libro eliminato correttamente", Toast.LENGTH_LONG).show();
-                prepareListData();
-                listAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onFailure(Call<Libro> call, Throwable t) {
-
-            }
-        });
+        interazioneServer.deleteLibro(libro);
+        prepareListData();
+        listAdapter.notifyDataSetChanged();
     }
 }
 

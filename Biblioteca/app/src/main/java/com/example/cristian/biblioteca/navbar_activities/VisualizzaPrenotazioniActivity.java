@@ -12,7 +12,7 @@ import com.example.cristian.biblioteca.Home;
 import com.example.cristian.biblioteca.NavDrawer;
 import com.example.cristian.biblioteca.R;
 import com.example.cristian.biblioteca.entities.Prenotazione;
-import com.example.cristian.biblioteca.Adapter.PrenotazioneAdapter;
+import com.example.cristian.biblioteca.adapter.PrenotazioneAdapter;
 import com.example.cristian.biblioteca.connection.rf.RFClient;
 import com.example.cristian.biblioteca.connection.struct.prenotazioni.EmbeddedPrenotazioni;
 import com.example.cristian.biblioteca.connection.struct.prenotazioni.ServicePrenotazioni;

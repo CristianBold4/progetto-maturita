@@ -223,7 +223,6 @@ public class SignInActivity extends NavDrawer implements
                 public void onResponse(Call<EmbeddedAdmins> call, Response<EmbeddedAdmins> response) {
                     if (response.isSuccessful()){
                         if (containsAdmin(response.body().getEmbedded(), currentUser.getEmail())){
-                            System.out.println("IMMANADMINMANNN");
                             NavDrawer.setActiveAdmin(true);
                         } else {
                             NavDrawer.setActiveAdmin(false);
