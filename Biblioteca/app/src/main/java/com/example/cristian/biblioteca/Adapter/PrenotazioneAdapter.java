@@ -1,4 +1,4 @@
-package com.example.cristian.biblioteca.RecyclerView;
+package com.example.cristian.biblioteca.Adapter;
 
 
 import android.content.Context;

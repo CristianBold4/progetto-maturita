@@ -11,12 +11,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.cristian.biblioteca.RecyclerView.LibroAdapter;
+import com.example.cristian.biblioteca.Adapter.LibroAdapter;
 import com.example.cristian.biblioteca.connection.rf.RFClient;
 import com.example.cristian.biblioteca.connection.struct.libri.EmbeddedLibri;
 import com.example.cristian.biblioteca.connection.struct.libri.ServiceLibri;
 import com.example.cristian.biblioteca.entities.Libro;
-import com.example.cristian.biblioteca.navbar_activities.ArchivioLibriActivity;
 
 import java.util.ArrayList;
 

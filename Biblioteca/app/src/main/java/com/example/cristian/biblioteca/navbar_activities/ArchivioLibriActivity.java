@@ -17,7 +17,7 @@ import com.example.cristian.biblioteca.Home;
 import com.example.cristian.biblioteca.NavDrawer;
 import com.example.cristian.biblioteca.R;
 import com.example.cristian.biblioteca.entities.Libro;
-import com.example.cristian.biblioteca.RecyclerView.LibroAdapter;
+import com.example.cristian.biblioteca.Adapter.LibroAdapter;
 import com.example.cristian.biblioteca.connection.rf.RFClient;
 import com.example.cristian.biblioteca.connection.struct.libri.EmbeddedLibri;
 import com.example.cristian.biblioteca.connection.struct.libri.ServiceLibri;

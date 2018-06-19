@@ -57,25 +57,28 @@ public class InformazioniLibro extends NavDrawer {
     private SeekBar mSeek;
     private TextView copieSelezionate;
 
+    public InterazioneServer interazioneServer = new InterazioneServer(InformazioniLibro.this);
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informazioni_libro);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar);
         if(progressBar != null) {
             progressBar.getIndeterminateDrawable().setColorFilter(0xff888888,
                     android.graphics.PorterDuff.Mode.MULTIPLY);
         }
-        nomeLibro = (TextView) findViewById(R.id.nome_prodotto);
-        immagineProdotto = (ImageView) findViewById(R.id.immagine_prodotto);
-        descrizione = (TextView) findViewById(R.id.descrizione_ridotta_prodotto);
-        autore = (TextView) findViewById(R.id.autoreLibro);
-        disponibilita = (TextView) findViewById(R.id.disponibilita);
-        mSeek = (SeekBar) findViewById(R.id.seekBar);
-        copieSelezionate = (TextView) findViewById(R.id.curentValue);
+        nomeLibro = findViewById(R.id.nome_prodotto);
+        immagineProdotto =  findViewById(R.id.immagine_prodotto);
+        descrizione = findViewById(R.id.descrizione_ridotta_prodotto);
+        autore =  findViewById(R.id.autoreLibro);
+        disponibilita = findViewById(R.id.disponibilita);
+        mSeek =  findViewById(R.id.seekBar);
+        copieSelezionate =  findViewById(R.id.curentValue);
 
-        prenotaLibro = (Button) findViewById(R.id.prenota_libro);
+        prenotaLibro = findViewById(R.id.prenota_libro);
         prenotaLibro.setOnClickListener(v -> confermaPrenotazione());
     }
 
@@ -229,41 +232,12 @@ public class InformazioniLibro extends NavDrawer {
 
 
     public void certificaAcquisto(Prenotazione prenotazione) {
-
-        ServicePrenotazioni mServicePost;
-        mServicePost = RFClient.getClient().create(ServicePrenotazioni.class);
-        mServicePost.insertPrenotazione(prenotazione).enqueue(new Callback<Prenotazione>() {
-            @Override
-            public void onResponse(Call<Prenotazione> call, Response<Prenotazione> response) {
-                if (response.isSuccessful()){
-                    Toast.makeText(InformazioniLibro.this, R.string.prenotazione_effettuata_correttamente, Toast.LENGTH_SHORT).show();
-                } else {
-                    int statusCode = response.code();
-                    Log.d("Contacting server", "Error " + statusCode);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Prenotazione> call, Throwable t) { }
-        });
+        interazioneServer.postPrenotazione(prenotazione);
     }
 
     public void updateScorta(Libro l) {
         l.setCopie(l.getCopie() - 1);
-        ServiceLibri mServiceUpdate = RFClient.getClient().create(ServiceLibri.class);
-        mServiceUpdate.updateScorta(l).enqueue(new Callback<Libro>() {
-            @Override
-            public void onResponse(Call<Libro> call, Response<Libro> response) {
-                if (!response.isSuccessful()){
-                    int statusCode = response.code();
-                    Log.d("Contacting server", "Error " + statusCode);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Libro> call, Throwable t) {
-            }
-        });
+        interazioneServer.updateScorta(l);
     }
 
     @Override
