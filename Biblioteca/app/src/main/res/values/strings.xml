@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">Biblioteca</string>
+    <string name="title_activity_drawer_activity">Drawer_activity</string>
+    <string name="google_map_key">AIzaSyCKPI2cKfl-ueoto2F9mBkYHgxiBt5AcNI</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="label_google_sign_in">Firebase + Google Sign In</string>
+    <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
+
+    <string name="label_facebook_login">Firebase + Facebook Login</string>
+    <string name="desc_facebook_login">Use a Facebook Login credential to authenticate with Firebase.</string>
+
+    <string name="label_twitter_login">Firebase + Twitter Login</string>
+    <string name="desc_twitter_login">Use a Twitter Login credential to authenticate with Firebase.</string>
+
+    <string name="label_emailpassword">Email/Password Authentication</string>
+    <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
+
+    <string name="label_phone_auth">Phone Number Authentication</string>
+    <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
+
+    <string name="label_anonymous_auth">Anonymous Authentication</string>
+    <string name="desc_anonymous_auth">Sign in anonymously and then later upgrade to a full Firebase Auth user.</string>
+
+    <string name="label_custom_auth">Custom Authentication</string>
+    <string name="desc_custom_auth">Use a custom token signed by your own server to authenticate with Firebase.</string>
+
+    <string name="label_firebase_ui">FirebaseUI Auth</string>
+    <string name="desc_firebase_ui">Use the FirebaseUI-Android library to authenticate with Firebase.</string>
+
+    <string name="hint_user_id">User ID</string>
+    <string name="get_custom_token">Get Token</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="loading">Loading…</string>
+    <string name="custom_token">Custom Token</string>
+    <string name="signed_in">Signed In</string>
+    <string name="signed_out" translatable="false">Accedendo con il tuo account google, potrai accedere a numerose funzionalità dell\'app.</string>
+    <string name="token_null">Token: null</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="start_phone_auth">Start</string>
+    <string name="verify_phone_auth">Verify</string>
+    <string name="resend_phone_auth">Resend</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_verification_code">Verification Code</string>
+    <string name="status_code_sent">Code Sent</string>
+    <string name="status_verification_failed">Verification failed</string>
+    <string name="status_verification_succeeded">Verification succeeded</string>
+    <string name="status_sign_in_failed">Sign-in failed</string>
+    <string name="instant_validation">(instant validation)</string>
+
+    <string name="surname_user">%s</string>
+    <string name="name_user">%s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+
+    <string name="google_title_text">Accedi con Google</string>
+    <string name="google_signed_text">Ciao, %s</string>
+
+    <string name="facebook_status_fmt">Facebook User: %s</string>
+    <string name="facebook_title_text">Facebook Login</string>
+
+    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
+    <string name="emailpassword_title_text">Email and Password</string>
+
+    <string name="phone_title_text">Phone Number</string>
+
+    <string name="twitter_status_fmt">Twitter User: %s</string>
+    <string name="twitter_title_text">Twitter Login</string>
+
+    <string name="firebaseui_status_fmt">Firebase User: %s</string>
+    <string name="firebaseui_title_text">FirebaseUI Auth</string>
+
+    <string name="id_tag" translatable="false">ID TAG:</string>
+    <string name="permesso_gps_richiesto" translatable="false">Questa sezione richiede il permesso di accesso alla posizione.</string>
+    <string name="nome_prodotto" translatable="false">Nome Libro</string>
+    <string name="descrizione_ridotta" translatable="false">Descrizione ridotta</string>
+
+    <string name="id_fmt">User ID: %s</string>
+    <string name="email_fmt">Email: %s</string>
+
+    <string name="errore_generico_fatale" translatable="false">Si è verificato un errore interno, riprova più tardi</string>
+
+    <string name="no" translatable="false">No</string>
+    <string name="si" translatable="false">Sì</string>
+    <string name="confermi_domanda" translatable="false">Confermi?</string>
+    <string name="confermi_certificazione_domanda" translatable="false">Confermi di voler prenotare questo libro?</string>
+    <string name="abilita_gps" translatable="false">Abilita il GPS per eseguire questa operazione</string>
+    <string name="attendere_prego" translatable="false">Attendere prego…</string>
+    <string name="attenzione" translatable="false">Attenzione</string>
+    <string name="prenota_libro" translatable="false">Prenota libro</string>
+    <string name="error_server_non_raggiungibile" translatable="false">Impossibile contattare il server</string>
+    <string name="richiesta_sign_in" translatable="false">Prima di poter scannerizzare un libro devi registrarti. Desideri farlo?</string>
+    <string name="titolo_sign_in" translatable="false">Richiesta accesso</string>
+    <string name="le_mie_prenotazioni">Le mie prenotazioni</string>
+    <string name="scannerizza_libro">Scannerizza libro</string>
+    <string name="dove_siamo">Dove siamo</string>
+    <string name="prenotazione_effettuata_correttamente">Prenotazione effettuata correttamente.</string>
+    <string name="errore_copie_0">Seleziona il numero di copie da prenotare</string>
+    <string name="prenotazione_effettuata">Prenotazione effettuata con successo</string>
+    <string name="richiesta_internet">Richiesta Internet</string>
+    <string name="richiesta_internet_desc">Questa applicazione richiede internet. Attiva internet per poter utilizzare l\'applicazione</string>
+    <string name="ok">Ok</string>
+    <string name="email_sender">bibliotecazuccante@gmail.com</string>
+    <string name="impossibile_eliminare_prenotazione">Impossibile eliminare la prenotazione</string>
+    <string name="lista_prenotazione">Lista Prenotazioni</string>
+    <string name="nessuna_prenotazione">Nessuna prenotazione libri in corso al momento.</string>
+    <string name="nessun_libro_in_archivio">Nessun libro in archivio</string>
+    <string name="archivio_libri">Archivio libri</string>
+    <string name="messaggio_uscita">Sei sicuro di voler uscire?</string>
+    <string name="zona_admin">Zona admin</string>
+    <string name="title_activity_zona_admin">ZonaAdminActivity</string>
+    <string name="visualizza_prenotazioni"> Visualizza prenotazioni</string>
+    <string name="inserisci_libro">Inserisci libro</string>
+    <string name="visualizza_archivio_libri">Visualizza archivio libri</string>
+    <string name="tiitolo_libro">Titolo Libro</string>
+    <string name="autore">Autore</string>
+    <string name="prezzo_libro">Prezzo</string>
+    <string name="editore">Editore</string>
+    <string name="numero_copie">Numero copie</string>
+    <string name="modifica_libro">Modifica libro</string>
+    <string name="descrizione">Descrizione</string>
+    <string name="url_immagine">URL immagine</string>
+    <string name="inserisci_nuovo_libro">Inserisci nuovo libro</string>
+    <string name="errore_campi_vuoti">I campi non possono essere vuoti</string>
+    <string name="genere">Genere</string>
+    <string name="text_home">Biblioteca Zuccante è l\'app che ti permetterà di prenotare libri direttamente dal tuo smartphone. Accedi con il tuo account Google e scopri le funzionalità dell\'app.</string>
+
+
+</resources>

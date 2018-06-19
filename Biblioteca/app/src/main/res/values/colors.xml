@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffff</color>
+    <color name="black">#000000</color>
+
+
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+
+    <color name="redTittle">#ff0000</color>
+
+    <color name="copie_disponibile">#00df2d</color>
+    <color name="copie_non_disponibile">#ff0000</color>
+    <color name="copia_in_esaurimeneto">#ff8000</color>
+
+    <!-- Colori pagina di login-->
+    <color name="activity_login_background_color">#e5f96401</color>
+    <color name="activity_login_input_text_color">#fafafa</color>
+    <color name="activity_login_title_color">#fff</color>
+    <color name="activity_login_registrati_color">#646464</color>
+
+    <!-- Colori pagina di registrazione-->
+    <color name="activity_registrazione_background_color">#e2ff6600</color>
+    <color name="activity_registrazione_input_text_color">#fafafa</color>
+    <color name="activity_registrazione_title_color">#fff</color>
+    <color name="activity_registrazione_registrati_color">#646464</color>
+
+    <color name="activity_leggi_tag_background_color">#e2ff6600</color>
+
+    <color name="google_sfondo_bottone_login">#f4f4f4</color>
+    <color name="google_sfondo_bottone_login_premuto">#c7c7c7</color>
+    <color name="google_colore_testo_bottone_login">#fff</color>
+
+    <color name="connessione_assente_background">#e2ff802c</color>
+
+    <!--  <color name="info_prodotto_background">#f8f7f9</color>-->
+    <color name="info_prodotto_background">#fff</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="coloreCursore">#2d2d2d</color>
+</resources>

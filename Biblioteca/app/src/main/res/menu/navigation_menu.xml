@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu">
+
+    <item android:id="@+id/scanBook"
+        android:title="@string/scannerizza_libro"
+        android:icon="@drawable/ic_camera_alt_black_24dp">
+    </item>
+
+    <item android:id="@+id/miePrenotazioni"
+        android:title="@string/le_mie_prenotazioni"
+        android:icon="@drawable/ic_library_books_black_24dp">
+    </item>
+
+    <item android:id="@+id/archivioLibri"
+        android:title="@string/archivio_libri"
+        android:icon="@drawable/ic_import_contacts_black_24dp"
+        ></item>
+
+    <item android:id="@+id/googleSignIn"
+        android:title=""
+        android:icon="@drawable/ic_person_black_24dp">
+    </item>
+
+    <item android:id="@+id/location"
+        android:title="@string/dove_siamo"
+        android:icon="@drawable/ic_my_location_black_24dp">
+    </item>
+
+    <item android:id="@+id/zonaAdmin"
+        android:title="@string/zona_admin"
+        android:icon="@drawable/ic_accessibility_black_24dp">
+    </item>
+</menu>

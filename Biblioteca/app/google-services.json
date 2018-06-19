@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "577738020957",
+    "firebase_url": "https://biblioteca-bf3c8.firebaseio.com",
+    "project_id": "biblioteca-bf3c8",
+    "storage_bucket": "biblioteca-bf3c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577738020957:android:b910f4288bf209df",
+        "android_client_info": {
+          "package_name": "com.example.cristian.biblioteca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577738020957-djei1uel85qiprbpghp68egsdfbm4k7s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cristian.biblioteca",
+            "certificate_hash": "e36bb32db300937cd9bd922b1a1918bf38ebc6b3"
+          }
+        },
+        {
+          "client_id": "577738020957-fujjmqjjho0gjgm7oe99187kbu9dqnu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTz6ei_zrpv_pbOWSQNoz6_d_70W9NCIY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577738020957-fujjmqjjho0gjgm7oe99187kbu9dqnu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
