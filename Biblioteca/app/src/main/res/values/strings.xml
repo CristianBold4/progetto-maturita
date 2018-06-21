@@ -104,7 +104,7 @@
     <string name="attenzione" translatable="false">Attenzione</string>
     <string name="prenota_libro" translatable="false">Prenota libro</string>
     <string name="error_server_non_raggiungibile" translatable="false">Impossibile contattare il server</string>
-    <string name="richiesta_sign_in" translatable="false">Prima di poter scannerizzare un libro devi registrarti. Desideri farlo?</string>
+    <string name="richiesta_sign_in" translatable="false">Prima di poter procedere devi effettuare l\'accesso con il tuo account Google. Desideri farlo?</string>
     <string name="titolo_sign_in" translatable="false">Richiesta accesso</string>
     <string name="le_mie_prenotazioni">Le mie prenotazioni</string>
     <string name="scannerizza_libro">Scannerizza libro</string>
