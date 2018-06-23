@@ -42,7 +42,6 @@ public class LibroAdapter extends RecyclerView.Adapter<LibroAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(LibroAdapter.ViewHolder holder, int position) {
-        System.out.println("POSTION ++++++++++++++++++" + position);
         final Libro libro = libriFiltrati.get(position);
         holder.setItem(libro);
     }
@@ -54,7 +53,6 @@ public class LibroAdapter extends RecyclerView.Adapter<LibroAdapter.ViewHolder> 
 
     @Override
     public Filter getFilter() {
-        System.out.println("Returning a new Filter");
         return new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence charSequence) {
@@ -68,7 +66,6 @@ public class LibroAdapter extends RecyclerView.Adapter<LibroAdapter.ViewHolder> 
                         // name match condition. this might differ depending on your requirement
                         // here we are looking for name or phone number match
                         if (l.getTitolo().toLowerCase().contains(charString.toLowerCase())) {
-                            System.out.println("match trovato");
                             filteredList.add(l);
                         }
                     }
