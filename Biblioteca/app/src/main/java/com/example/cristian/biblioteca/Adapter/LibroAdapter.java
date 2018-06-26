@@ -3,6 +3,7 @@ package com.example.cristian.biblioteca.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +33,7 @@ public class LibroAdapter extends RecyclerView.Adapter<LibroAdapter.ViewHolder> 
         this.libri = libri;
         this.libriFiltrati =  libri;
     }
+
 
     @Override
     public LibroAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
