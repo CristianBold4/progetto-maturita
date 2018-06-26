@@ -1,6 +1,7 @@
 package com.example.cristian.biblioteca.connection.struct.prenotazioni;
 
 
+import com.example.cristian.biblioteca.entities.Libro;
 import com.example.cristian.biblioteca.entities.Prenotazione;
 
 import retrofit2.Call;
@@ -20,8 +21,9 @@ public interface ServicePrenotazioni {
     @GET("boldrin/prenotazioni")
     Call<EmbeddedPrenotazioni> getEmbedded();
 
-    @GET("boldrin/prenotazioni")
-    Call<EmbeddedPrenotazioni> getPrenotazioneByUser(@Query(value = "filter", encoded = true) String query);
+    @GET("boldrin/{MailUtente}/prenotazioni/")
+    Call<EmbeddedPrenotazioni> getPrenotazioneByUser(@Path(value = "MailUtente") String mail);
+
 
     @POST("boldrin/prenotazioni")
     Call<Prenotazione> insertPrenotazione(@Body Prenotazione p);

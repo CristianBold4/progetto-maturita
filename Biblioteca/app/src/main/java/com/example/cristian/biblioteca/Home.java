@@ -14,7 +14,7 @@ import com.example.cristian.biblioteca.navbar_activities.SignInActivity;
  * Created by Cristian on 26/01/2018.
  */
 
-public class Home extends NavDrawer  {
+public class Home extends NavDrawer {
 
 
     @Override

@@ -16,6 +16,7 @@ import com.example.cristian.biblioteca.adapter.PrenotazioneAdapter;
 import com.example.cristian.biblioteca.connection.rf.RFClient;
 import com.example.cristian.biblioteca.connection.struct.prenotazioni.EmbeddedPrenotazioni;
 import com.example.cristian.biblioteca.connection.struct.prenotazioni.ServicePrenotazioni;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -59,15 +60,23 @@ public class VisualizzaPrenotazioniActivity extends NavDrawer {
 
     public void getPrenotazioni() {
         servicePrenotazioni = RFClient.getClient().create(ServicePrenotazioni.class);
+        String currentEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        System.out.println(currentEmail);
         servicePrenotazioni.getEmbedded().enqueue(new Callback<EmbeddedPrenotazioni>() {
             @Override
             public void onResponse(Call<EmbeddedPrenotazioni> call, Response<EmbeddedPrenotazioni> response) {
                 if (response.isSuccessful()){
                     ArrayList<Prenotazione> app = new ArrayList<>(response.body().getEmbedded());
-                    if (app.isEmpty()){
+                    ArrayList<Prenotazione> list = new ArrayList<>();
+                    for (Prenotazione p : app){
+                        if (p.getUtente().equals(currentEmail)){
+                            list.add(p);
+                        }
+                    }
+                    if (list.isEmpty()){
                         status.setText(R.string.nessuna_prenotazione);
                     } else {
-                        showPrenotazioni(app);
+                        showPrenotazioni(list);
                         status.setText(R.string.lista_prenotazione);
                     }
                 } else {

@@ -18,7 +18,7 @@ import retrofit2.http.Path;
 public interface ServiceLibri {
 
 
-    @GET("boldrin/libri")
+    @GET("boldrin/libri?sort=asc")
     Call<EmbeddedLibri> getEmbedded();
 
     @GET("boldrin/libri/{id}")
